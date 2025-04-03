@@ -1,5 +1,5 @@
-import React from 'react';
-import { createRoot } from 'react-dom';
+import React from "react";
+import { createRoot } from "react-dom";
 
 function Title(props) {
   return <h1>{props.title}</h1>;
@@ -11,7 +11,7 @@ class Catalog extends React.Component {
     this.state = {
       filename: "images/img1.jpg",
       alt: "image 1",
-      editing: false
+      editing: false,
     };
 
     this.editClick = this.editClick.bind(this);
@@ -41,7 +41,11 @@ class Catalog extends React.Component {
       <div>
         <Title title="Lab06 - React Application" />
         <h2>{this.state.alt}</h2>
-        <img src={this.state.filename} alt={this.state.alt} onClick={this.editClick} />
+        <img
+          src={this.state.filename}
+          alt={this.state.alt}
+          onClick={this.editClick}
+        />
       </div>
     );
   }
@@ -59,7 +63,11 @@ class Catalog extends React.Component {
         </select>
         <br />
         <p>Alt:</p>
-        <input type="text" value={this.state.alt} onChange={this.handleAltChange} />
+        <input
+          type="text"
+          value={this.state.alt}
+          onChange={this.handleAltChange}
+        />
         <br />
         <button onClick={this.saveClick}>Save</button>
       </div>
@@ -76,12 +84,10 @@ class Catalog extends React.Component {
 }
 
 function Lab06App() {
-  return (
-    <Catalog />
-  )
+  return <Catalog />;
 }
 
-const root = document.getElementById('react-lab');
+const root = document.getElementById("react-lab");
 createRoot(root).render(<Lab06App />);
 
 export default Lab06App;

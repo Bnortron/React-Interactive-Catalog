@@ -1,5 +1,4 @@
 import React from "react";
-import { createRoot } from "react-dom";
 
 function Title(props) {
   return <h1>{props.title}</h1>;
@@ -86,8 +85,5 @@ class Catalog extends React.Component {
 function Lab06App() {
   return <Catalog />;
 }
-
-const root = document.getElementById("react-lab");
-createRoot(root).render(<Lab06App />);
 
 export default Lab06App;
